@@ -1,8 +1,8 @@
-local bufferline = require 'my-theme.integrations.bufferline'
-local cmp = require 'my-theme.integrations.cmp'
-local colorscheme = require 'my-theme.colorscheme'
-local config = require 'my-theme.config'
-local utils = require 'my-theme.utils'
+local bufferline = require 'desert-night.integrations.bufferline'
+local cmp = require 'desert-night.integrations.cmp'
+local colorscheme = require 'desert-night.colorscheme'
+local config = require 'desert-night.config'
+local utils = require 'desert-night.utils'
 local theme = {}
 
 local function set_terminal_colors()
@@ -367,7 +367,7 @@ end
 function theme.colorscheme()
   if vim.version().minor < 8 then
     vim.notify(
-      'Neovim 0.8+ is required for my-theme colorscheme',
+      'Neovim 0.8+ is required for desert-night colorscheme',
       vim.log.levels.ERROR,
       { title = 'Min Theme' }
     )
@@ -381,7 +381,7 @@ function theme.colorscheme()
 
   vim.g.VM_theme_set_by_colorscheme = true
   vim.o.termguicolors = true
-  vim.g.colors_name = 'my-theme'
+  vim.g.colors_name = 'desert-night'
 
   set_terminal_colors()
   set_groups()
